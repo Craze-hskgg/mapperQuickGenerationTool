@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapperquickgenerationtool.mapper.CdanMapper">
+  <insert id="insert" parameterType="com.example.mapperquickgenerationtool.model.Cdan">
+    insert into CDAN (id)
+    values (#{id,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.mapperquickgenerationtool.model.Cdan">
+    insert into CDAN
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>
